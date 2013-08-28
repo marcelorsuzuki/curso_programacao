@@ -111,7 +111,7 @@ public class CalculaIdade {
 			}
 			else {
 				if ((uMes.equals("JAN") || uMes.equals("MAR") || uMes.equals("MAI") || uMes.equals("JUL") || 
-					 uMes.equals("MAR") || uMes.equals("MAI") || uMes.equals("JUL")) && (d > 31)) {
+					 uMes.equals("AGO") || uMes.equals("OUT") || uMes.equals("DEZ")) && (d > 31)) {
 					return false;
 				}
 				else {
