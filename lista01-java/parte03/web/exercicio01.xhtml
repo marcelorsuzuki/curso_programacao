@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Parte 02 - Exercício 01</title>
+    </h:head>
+    <h:body>
+         <h:form>
+             
+            <h2>Filme 1</h2>
+            <h:outputText value="Nome:"/>
+            <h:inputText value="#{exe01C.nomeFilme1}" /> 
+            <br />
+            
+            <h:outputText value="Quantidade de estrelas:"/>
+            <h:inputText value="#{exe01C.estrelaFilme1}" /> 
+            <br />
+            
+            <h:outputText value="Quantidade de oscars:"/>
+            <h:inputText value="#{exe01C.oscarFilme1}" /> 
+            <br />
+            
+            
+            <h2>Filme 2</h2>
+            <h:outputText value="Nome:"/>
+            <h:inputText value="#{exe01C.nomeFilme2}" /> 
+            <br />
+            
+            <h:outputText value="Quantidade de estrelas:"/>
+            <h:inputText value="#{exe01C.estrelaFilme2}" /> 
+            <br />
+            
+            <h:outputText value="Quantidade de oscars:"/>
+            <h:inputText value="#{exe01C.oscarFilme2}" /> 
+            
+            <br />
+            <br />
+            <h:commandButton  value="Melhor Filme" action="#{exe01C.melhorAction}" />
+            <br />
+            
+            <h:outputLabel value="Melhor filme: #{exe01C.melhorFilme.nome}" /> <br />
+            <h:outputLabel value="#{exe01C.melhorFilme.oscarMensagem()}" />
+        </h:form>
+        
+    </h:body>
+</html>
+
