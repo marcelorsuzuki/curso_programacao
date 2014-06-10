@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Parte 05 - Exercício 01</title>
+    </h:head>
+    <h:body>
+         <h:form>
+             
+            <h:panelGrid columns="2">
+               
+                <h:outputText value="Insira o nome do aluno:"/>
+                <h:inputText value="#{exe01E.nome}" /> 
+            
+                <h:outputText value="Insira a nota do primeiro bimestre:"/>
+                <h:inputText value="#{exe01E.nota1}" /> 
+            
+                <h:outputText value="Insira a nota do segundo bimestre:"/>
+                <h:inputText value="#{exe01E.nota2}" /> 
+            
+                <h:outputText value="Insira a nota do terceiro bimestre:"/>
+                <h:inputText value="#{exe01E.nota3}" /> 
+            
+                <h:outputText value="Insira a nota do quarto bimestre:"/>
+                <h:inputText value="#{exe01E.nota4}" /> 
+                
+            </h:panelGrid>
+             
+            <h:commandButton  value="Adiciona aluno" action="#{exe01E.adiciona()}" />
+            <br/>
+            <br/>
+            <h:dataTable title="Alunos" value="#{exe01E.alunoList}" var="a">
+                
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Nome do aluno" />
+                    </f:facet>
+                    <h:outputText value="#{a.nome}" />
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="1º Bimestre" />
+                    </f:facet>
+                    <h:outputText value="#{a.nota1}" />
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="2º Bimestre" />
+                    </f:facet>
+                    <h:outputText value="#{a.nota2}" />
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="3º Bimestre" />
+                    </f:facet>
+                    <h:outputText value="#{a.nota3}" />
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="4º Bimestre" />
+                    </f:facet>
+                    <h:outputText value="#{a.nota4}" />
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Média do Aluno" />
+                    </f:facet>
+                    <h:outputText value="#{a.calculaMedia()}" />
+                </h:column>
+
+            </h:dataTable>
+
+            <br/>
+            <h:outputText value="A média da turma é #{exe01E.mediaDaTurma()}" />
+            
+        </h:form>
+        
+    </h:body>
+</html>
+
